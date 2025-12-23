@@ -1843,7 +1843,7 @@ class SetupWizard:
                     print_success("Kortix Super Worker services are starting up!")
                 else:
                     print_warning(
-                        "Some services might not be running. Check '{compose_cmd_str} ps' for details."
+                        f"Some services might not be running. Check '{compose_cmd_str} ps' for details."
                     )
             except subprocess.SubprocessError as e:
                 print_error(f"Failed to start Kortix Super Worker with Docker Compose: {e}")

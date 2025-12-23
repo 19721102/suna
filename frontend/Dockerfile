@@ -2,6 +2,15 @@
 # ---- Base Stage ----
 FROM node:22-slim AS base
 
+# Build-time public env for Next.js (injected via docker-compose build args)
+ARG NEXT_PUBLIC_BACKEND_URL
+ARG NEXT_PUBLIC_URL
+ARG NEXT_PUBLIC_ENV_MODE
+ENV NEXT_PUBLIC_BACKEND_URL=${NEXT_PUBLIC_BACKEND_URL}
+ENV NEXT_PUBLIC_URL=${NEXT_PUBLIC_URL}
+ENV NEXT_PUBLIC_ENV_MODE=${NEXT_PUBLIC_ENV_MODE}
+
+
 # Install dependencies only when needed
 FROM base AS deps
 
