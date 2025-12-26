@@ -60,6 +60,7 @@ cover/
 
 # Django stuff:
 *.log
+logs/
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
@@ -126,6 +127,9 @@ celerybeat.pid
 
 # Environments
 .env
+.env.*
+.env.bak
+*.env
 .venv
 env/
 venv/
@@ -211,6 +215,16 @@ dump.rdb
 
 # CodeWebChat state and logs (auto-added)
 .cwc/
+
+# Local debug artifacts
+_debug_*
+openapi.json
+
+# Temp files
+*.tmp
+*.bak
+*.swp
+*.swo
 
 
 # mobile specific
