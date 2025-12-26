@@ -191,6 +191,9 @@ supabase/.temp/postgres-version
 supabase/.temp/project-ref
 supabase/.temp/rest-version
 supabase/.temp/storage-version
+supabase/.temp/
+supabase/logs/
+supabase/.cache/
 
 **/.prompts/
 **/__pycache__/
